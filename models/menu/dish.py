@@ -4,4 +4,5 @@ class Dish(ItemMenu):
         super().__init__(name, price) # permite acessar informações de outra classe
         self.description = description
 
-
+    def __str__(self):
+        return self._name
