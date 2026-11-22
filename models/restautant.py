@@ -7,6 +7,7 @@ class Restaurant:
         self._category = category.upper()
         self._active = False # _ == private
         self._assessment = []
+        self._menu = []
         Restaurant.restaurants.append(self)
 
     def __str__(self): # = a to string in java 
@@ -39,4 +40,9 @@ class Restaurant:
         average = round(sum_notes / amount_notes, 1)
         return average
         
-    
+
+    def add_drink_in_menu(self, drink):
+        self._menu.append(drink)
+
+    def add_dish_in_menu(self, dish):
+        self._menu.append(dish)
