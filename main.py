@@ -9,11 +9,9 @@ teixeira_restaurant = Restaurant(name="Teixeira", category="Caseira")
 
 drink_juice = Drink(name="Orange Juice", price=8.00, size= "big")
 vinagret_dish = Dish(name= "Small Vinagret", price= 10.00, description="Better vinagret in the city")
+requinte_restaurant.add_drink_in_menu(drink_juice)
+requinte_restaurant.add_dish_in_menu0(vinagret_dish)
 
-
-
-
-teixeira_restaurant.toggle_state()
 
 def main():
     print(drink_juice)
