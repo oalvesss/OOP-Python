@@ -1,4 +1,5 @@
 from models.assessment import Assessment
+from models.menu.item_menu import ItemMenu
 class Restaurant:
     restaurants = []
 
@@ -41,8 +42,12 @@ class Restaurant:
         return average
         
 
-    def add_drink_in_menu(self, drink):
-        self._menu.append(drink)
+    # def add_drink_in_menu(self, drink):
+    #     self._menu.append(drink)
 
-    def add_dish_in_menu(self, dish):
-        self._menu.append(dish)
+    # def add_dish_in_menu(self, dish):
+    #     self._menu.append(dish)
+
+    def add_in_menu(self, item):
+        if isinstance(item, ItemMenu): # se item esta dentro de itemmenu
+            self._menu.append(item)
