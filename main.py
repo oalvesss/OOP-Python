@@ -1,18 +1,23 @@
 from models.restautant import Restaurant
+from models.menu.drink import Drink
+from models.menu.dish import Dish
+
 
 praca_restaurant = Restaurant(name="Da Praça", category="Gourmet")
 requinte_restaurant = Restaurant(name="Requinte", category="Buffet")
 teixeira_restaurant = Restaurant(name="Teixeira", category="Caseira")
-# praca_restaurant.claimAssessment("Zé", 10)
-teixeira_restaurant.claimAssessment("Lorena", 6)
-requinte_restaurant.claimAssessment("Pedro", 9)
-requinte_restaurant.claimAssessment("Graci", 3)
+
+drink_juice = Drink(name="Orange Juice", price=8.00, size= "big")
+vinagret_dish = Dish(name= "Small Vinagret", price= 10.00, description="Better vinagret in the city")
+
+
 
 
 teixeira_restaurant.toggle_state()
 
 def main():
-    Restaurant.restaurants_list()
+    print(drink_juice)
+    print(vinagret_dish)
 
 if __name__ == '__main__':
     main()
