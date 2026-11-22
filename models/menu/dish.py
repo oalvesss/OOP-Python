@@ -1,3 +1,7 @@
-class Dish:
+from models.menu.item_menu import ItemMenu
+class Dish(ItemMenu):
     def __init__(self, name, price, description):
-        pass
+        super().__init__(name, price) # permite acessar informações de outra classe
+        self.description = description
+
+
