@@ -11,7 +11,8 @@ drink_juice = Drink(name="Orange Juice", price=8.00, size= "big")
 vinagret_dish = Dish(name= "Small Vinagret", price= 10.00, description="Better vinagret in the city")
 requinte_restaurant.add_in_menu(drink_juice)
 requinte_restaurant.add_in_menu(vinagret_dish)
-
+drink_juice.apply_discount()
+vinagret_dish.apply_discount()
 
 def main():
     requinte_restaurant.show_menu
