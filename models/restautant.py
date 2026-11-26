@@ -40,14 +40,18 @@ class Restaurant:
         amount_notes = len(self._assessment)
         average = round(sum_notes / amount_notes, 1)
         return average
-        
-
-    # def add_drink_in_menu(self, drink):
-    #     self._menu.append(drink)
-
-    # def add_dish_in_menu(self, dish):
-    #     self._menu.append(dish)
 
     def add_in_menu(self, item):
         if isinstance(item, ItemMenu): # se item esta dentro de itemmenu
             self._menu.append(item)
+
+    @property
+    def show_menu(self):
+        print(f"Restaurant menu: {self._name}\n")
+        for i, item in enumerate(self._menu, start=1):
+            if hasattr(item, 'description'):
+                message_dish = f"{i}. Name: {item._name} | price: {item._price} | Description: {item.description}"
+                print(message_dish)
+            else:
+                message_drink = f"{i}. Name: {item._name} | price: {item._price} | Size: {item.size}"
+                print(message_drink)
