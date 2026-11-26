@@ -50,8 +50,8 @@ class Restaurant:
         print(f"Restaurant menu: {self._name}\n")
         for i, item in enumerate(self._menu, start=1):
             if hasattr(item, 'description'):
-                message_dish = f"{i}. Name: {item._name} | price: {item._price} | Description: {item.description}"
+                message_dish = f"{i}. Name: {item._name} | price: R$ {item._price} | Description: {item.description}"
                 print(message_dish)
             else:
-                message_drink = f"{i}. Name: {item._name} | price: {item._price} | Size: {item.size}"
+                message_drink = f"{i}. Name: {item._name} | price: R$ {item._price} | Size: {item.size}"
                 print(message_drink)
