@@ -14,8 +14,9 @@ requinte_restaurant.add_in_menu(vinagret_dish)
 
 
 def main():
-    print(drink_juice)
-    print(vinagret_dish)
+    requinte_restaurant.show_menu
+
+
 
 if __name__ == '__main__':
     main()
